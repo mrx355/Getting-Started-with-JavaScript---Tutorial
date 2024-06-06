@@ -19,7 +19,7 @@ document.getElementById("mins").innerHTML = "mm";
 document.getElementById("secs").innerHTML = "ss";
 
 //New variable for date-time
-var currentDay = new Date("June 04, 2024 15:29:05");
+var currentDay = new Date("June 05, 2024 14:00:05");
 var dateString = currentDay.toLocaleDateString();
 var timeString = currentDay.toLocaleTimeString();
 
@@ -48,3 +48,10 @@ document.getElementById("mins").textContent = Math.floor(minsLeft);
 //Seconds
 var secsLeft = (minsLeft - Math.floor(minsLeft))*60;
 document.getElementById("secs").textContent = Math.floor(secsLeft);
+
+function stopClock(){
+   clearTimeout();
+}
+
+setInterval(runClock, 1000);
+runClock();
